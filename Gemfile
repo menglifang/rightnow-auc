@@ -38,3 +38,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'devise'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
