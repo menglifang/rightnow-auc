@@ -15,3 +15,5 @@
 /tmp
 
 /.rvmrc
+/.sass-cache
+/db/schema.rb
