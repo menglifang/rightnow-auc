@@ -1,0 +1,28 @@
+#content
+  #header
+    .left
+      h1 注册
+      p
+        |支持使用第三方帐号登录，现在
+        a href=new_user_session_path 立即登录
+        |？
+    .right
+      h1
+        | 登录
+      a{href=new_user_session_path}: img{src=image_path("icons/metro/white_with_circle/Right.png")}
+  #sign-up
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      div.field
+        = f.label :email, '我的邮箱'
+        = f.email_field :email
+      div.field
+        = f.label :password, '密码'
+        = f.password_field :password
+      div.field
+        = f.label :password_confirmation, '密码确认'
+        = f.password_field :password_confirmation
+      div.actions
+        button type="submit" 注册
+  #footer
+    #copyright &copy; 2011-2012 北京梦立方网络科技有限公司 版权所有
