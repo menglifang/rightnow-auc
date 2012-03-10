@@ -1,0 +1,147 @@
+/*
+ *= require_self
+ *= require_tree .
+*/
+
+body {
+  background-color: #2f4009;
+}
+
+* {
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2 {
+  font-family: 微软雅黑,黑体,宋体
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+h2 { font-size: 36px; }
+
+p { margin: 0px; padding: 0px; }
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  width: 70px;
+  height: 28px;
+  color: #888;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.clear { clear: both; }
+.hidden { display: none; }
+
+#content {
+  width: 960px;
+  height: 650px;
+  padding: 48px 85px 50px 85px;
+  margin: 0 auto;
+
+  #header {
+    height: 72px;
+
+    .left {
+      float: left;
+      line-height: 24px;
+    }
+    .right {
+      float: right;
+      height: 48px;
+      width: 150px;
+      h1 {
+        float: left;
+        height: 48px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .field {
+    clear: both;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    label {
+      width: 310px;
+      display: block;
+      text-align: right;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 48px;
+      float: left;
+    }
+    input {
+      margin-left: 10px;
+      width: 300px;
+      height: 36px;
+      border: none;
+    }
+  }
+  .errors {
+    margin-top: 24px;
+    width: 300px;
+    height: 24px;
+  }
+  .actions {
+    margin-top: 24px;
+    margin-left: 320px;
+  }
+
+  #sign-up {
+    margin-top: 48px;
+    padding-top: 24px;
+    padding-right: 10px;
+    height: 336px;
+    background-color: #f09609;
+  }
+
+  #sign-in {
+    margin-top: 48px;
+    padding-top: 24px;
+    width: 630px;
+    height: 312px;
+    background-color: #f09609;
+    float: left;
+    .actions {
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  #third-party-sign-in {
+    margin-top: 48px;
+    width: 320px;
+    height: 336px;
+    float: right;
+    ul {
+      margin-left: 80px;
+      li {
+        list-style-type: none;
+        width: 105px;
+        height: 105px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        float: left;
+        background-color: #1BA1E2;
+      }
+    }
+  }
+
+  #footer {
+    margin-top: 96px;
+  }
+}
