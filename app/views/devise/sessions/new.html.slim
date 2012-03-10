@@ -1,34 +1,30 @@
 #content
   #header
     .left
-      h1 登录
-      p
-        |支持使用第三方帐号登录，也可
-        a href=new_user_registration_path 立即注册
-        |？
+      h1= t 'titles.sign_in'
+      p= t('descriptions.sign_in', sign_up: "<a href='#{new_user_registration_path}'>#{t('links.sign_up')}</a>").html_safe
     .right
-      h1
-        | 注册
+      h1= t 'titles.sign_in'
       a href=new_user_registration_path
         img src=image_path("icons/metro/white_with_circle/Right.png")
   #sign-in
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       = devise_error_messages!
       div.field
-        = f.label :email, '我的邮箱'
+        = f.label :email, t('activerecord.attributes.user.email')
         = f.email_field :email
       div.field
-        = f.label :password, '密码'
+        = f.label :password, t('activerecord.attributes.user.password')
         = f.password_field :password
       div.errors.hidden
       div.actions
-        button type="submit" 登录
+        button type="submit"= t('buttons.sign_in')
         = f.check_box :remember_me
-        = f.label :remember_me, ' 下次自动登录'
+        = f.label :remember_me, t('activerecord.attributes.user.remember_me')
   #third-party-sign-in
     ul
       - 6.times do
         li
   .clear
   #footer
-    #copyright &copy; 2011-2012 北京梦立方网络科技有限公司 版权所有
+    #copyright= t('copyright').html_safe
