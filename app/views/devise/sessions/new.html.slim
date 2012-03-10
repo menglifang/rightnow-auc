@@ -4,12 +4,11 @@
       h1= t 'titles.sign_in'
       p= t('descriptions.sign_in', sign_up: "<a href='#{new_user_registration_path}'>#{t('links.sign_up')}</a>").html_safe
     .right
-      h1= t 'titles.sign_in'
+      h1= t 'titles.sign_up'
       a href=new_user_registration_path
         img src=image_path("icons/metro/white_with_circle/Right.png")
-  #sign-in
+  #sign-in.clear
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      = devise_error_messages!
       div.field
         = f.label :email, t('activerecord.attributes.user.email')
         = f.email_field :email
@@ -26,5 +25,5 @@
       - 6.times do
         li
   .clear
-  #footer
+  #footer.clear
     #copyright= t('copyright').html_safe

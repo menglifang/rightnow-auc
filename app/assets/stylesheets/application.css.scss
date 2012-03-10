@@ -1,6 +1,6 @@
 /*
- *= require_self
  *= require_tree .
+ *= require_self
 */
 
 body {
@@ -33,10 +33,20 @@ a {
   font-weight: bold;
 }
 
+input {
+  color: black;
+  padding: 0px 10px;
+  margin-left: 10px;
+  border: none;
+  height: 36px;
+  &:focus { outline: none !important; }
+}
+
 button {
   width: 70px;
   height: 28px;
   color: #888;
+  background-color: #eee;
   border: none;
   font-size: 16px;
   font-weight: bold;
@@ -84,10 +94,7 @@ button {
       float: left;
     }
     input {
-      margin-left: 10px;
-      width: 300px;
-      height: 36px;
-      border: none;
+      width: 280px;
     }
   }
   .errors {
@@ -104,7 +111,7 @@ button {
     margin-top: 48px;
     padding-top: 24px;
     padding-right: 10px;
-    height: 336px;
+    height: 312px;
     background-color: #f09609;
   }
 
@@ -118,6 +125,12 @@ button {
     .actions {
       button {
         margin-right: 10px;
+      }
+      input {
+        margin-left: 0;
+        margin-right: 5px;
+        height: 14px;
+        outline: none;
       }
     }
   }

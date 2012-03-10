@@ -6,9 +6,8 @@
     .right
       h1= t 'titles.sign_in'
       a{href=new_user_session_path}: img{src=image_path("icons/metro/white_with_circle/Right.png")}
-  #sign-up
+  #sign-up.clear
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-      = devise_error_messages!
       div.field
         = f.label :email, t('activerecord.attributes.user.email')
         = f.email_field :email
