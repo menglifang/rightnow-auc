@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 require 'spec_helper'
 
-describe 'Sign up' do
+describe 'Sign up', js: true do
   it 'displays a form to sign up' do
     visit '/users/sign_up'
 
@@ -18,10 +18,9 @@ describe 'Sign up' do
 
     within '#sign-up' do
       click_button '注册'
-    end
 
-    page.should have_content '请填写您的邮箱地址'
-    page.should have_content '请设定您的登录密码'
+      page.should have_content '您填写的邮箱地址已经存在'
+    end
   end
 
   it 'alerts invalid email' do
@@ -31,22 +30,23 @@ describe 'Sign up' do
       fill_in '我的邮箱', with: 'towerhe'
 
       click_button '注册'
-    end
 
-    page.should have_content '您填写的邮箱地址格式不正确'
+      page.should have_content '您填写的邮箱地址格式不正确'
+    end
   end
 
   it 'alerts two passwords mismatch' do
     visit '/users/sign_up'
 
     within '#sign-up' do
+      fill_in '我的邮箱', with: 'towerhe@gmail.com'
       fill_in '密码', with: 'password'
       fill_in '密码确认', with: 'another one'
       
       click_button '注册'
-    end
 
-    page.should have_content '您两次填写的密码不一致'
+      page.should have_content '您两次填写的密码不一致'
+    end
   end
 
   it 'signs up a new user' do
