@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'slim'
+gem 'client_side_validations'
 
 group :development, :test do
   gem 'rspec-rails'
