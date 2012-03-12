@@ -1,0 +1,29 @@
+#content
+  #header
+    .left
+      h1= t 'titles.sign_in'
+      p= t('descriptions.sign_in', sign_up: "<a href='#{new_user_registration_path}'>#{t('links.sign_up')}</a>").html_safe
+    .right
+      h1= t 'titles.sign_up'
+      a href=new_user_registration_path
+        img src=image_path("icons/metro/white_with_circle/Right.png")
+  #sign-in.clear
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      div.field
+        = f.label :email, t('activerecord.attributes.user.email')
+        = f.email_field :email
+      div.field
+        = f.label :password, t('activerecord.attributes.user.password')
+        = f.password_field :password
+      div.errors.hidden
+      div.actions
+        button type="submit"= t('buttons.sign_in')
+        = f.check_box :remember_me
+        = f.label :remember_me, t('activerecord.attributes.user.remember_me')
+  #third-party-sign-in
+    ul
+      - 6.times do
+        li
+  .clear
+  #footer.clear
+    #copyright= t('copyright').html_safe

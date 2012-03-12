@@ -1,0 +1,42 @@
+'zh-CN':
+  copyright: '&copy; 2011-2012 北京梦立方网络科技有限公司 版权所有'
+  titles:
+    sign_up: 注册
+    sign_in: 登录
+
+  descriptions:
+    sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
+    sign_up: 支持使用第三方帐号登录，也可%{sign_in}？
+
+  links:
+    sign_in: 立即登录
+    sign_up: 立即注册
+
+  buttons:
+    sign_up: 注册
+    sign_in: 登录
+
+  activerecord:
+    models:
+      user: 用户
+    attributes:
+      user:
+        email: 我的邮箱
+        password: 登录密码
+        password: 密码
+        password_confirmation: 密码确认
+        remember_me: 下次自动登录
+    
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 您填写的邮箱地址已经存在
+              blank: 请填写您的邮箱地址
+              invalid: 您填写的邮箱地址格式不正确
+            password:
+              too_short: 您设定的密码太短，最短不得低于%{minimum}位
+              too_long: 您设定的密码太长，最长不得超过%{maximum}位
+              blank: 请设定您的登录密码
+              confirmation: 您两次填写的密码不一致

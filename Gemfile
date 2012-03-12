@@ -38,3 +38,15 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'devise'
+gem 'slim'
+gem 'client_side_validations'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'pry'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+end
