@@ -15,7 +15,9 @@
       div.field
         = f.label :password, t('activerecord.attributes.user.password')
         = f.password_field :password
-      div.errors.hidden
+      - if flash[:alert]
+        div.alert
+          = flash[:alert]
       div.actions
         button type="submit"= t('buttons.sign_in')
         = f.check_box :remember_me
