@@ -7,6 +7,8 @@ require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/rspec'
 
+require 'database_cleaner'
+
 Capybara.javascript_driver = :webkit
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -34,4 +36,22 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+
+  config.before(:suite) do
+    DatabaseCleaner.clean_with :truncation
+  end
+
+  config.before(:each) do
+    if Capybara.current_driver == :rack_test
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.start
+    else
+      DatabaseCleaner.strategy = :truncation
+    end
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
 end

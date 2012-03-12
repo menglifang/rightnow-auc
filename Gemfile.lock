@@ -52,6 +52,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
+    database_cleaner (0.7.1)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -164,6 +165,7 @@ DEPENDENCIES
   capybara-webkit
   client_side_validations
   coffee-rails (~> 3.2.1)
+  database_cleaner
   devise
   jquery-rails
   mysql2
