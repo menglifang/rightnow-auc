@@ -60,6 +60,6 @@ describe 'Sign up', js: true do
       click_button '注册'
     end
 
-    page.should have_content '恭喜您！您已经成功注册成为会员。'
+    page.should have_content '恭喜您！您已经登录成功。'
   end
 end
