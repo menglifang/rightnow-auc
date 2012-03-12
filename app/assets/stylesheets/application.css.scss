@@ -112,10 +112,16 @@ button {
       
     }
   }
-  .errors {
+  .alert {
     margin-top: 24px;
-    width: 300px;
-    height: 24px;
+    margin-left: 320px;
+    padding-left: 40px;
+    width: 260px;
+    height: 36px;
+    line-height: 36px;
+    background: red image_url('icons/metro/white_with_circle/Error.png') no-repeat left;
+    background-size: 24px 24px;
+    background-position: 10px;
   }
   .actions {
     margin-top: 24px;
