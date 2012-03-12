@@ -32,8 +32,11 @@
         user:
           attributes:
             email:
+              taken: 您填写的邮箱地址已经存在
               blank: 请填写您的邮箱地址
               invalid: 您填写的邮箱地址格式不正确
             password:
+              too_short: 您设定的密码太短，最短不得低于%{minimum}位
+              too_long: 您设定的密码太长，最长不得超过%{maximum}位
               blank: 请设定您的登录密码
               confirmation: 您两次填写的密码不一致

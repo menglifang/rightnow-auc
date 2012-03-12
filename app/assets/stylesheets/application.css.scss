@@ -96,6 +96,21 @@ button {
     input {
       width: 280px;
     }
+
+    label.message {
+      width: 270px;
+      height: 36px;
+      text-align: left;
+      margin-right: 5px;
+      padding-left: 40px;
+      font-size: 14px;
+      line-height: 36px;
+      float: right;
+      background: red image_url('icons/metro/white_with_circle/Error.png') no-repeat left;
+      background-size: 24px 24px;
+      background-position: 10px;
+      
+    }
   }
   .errors {
     margin-top: 24px;
