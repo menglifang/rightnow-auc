@@ -44,6 +44,7 @@ gem 'doorkeeper'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'quiet_assets'
   gem 'pry'
 end
 
