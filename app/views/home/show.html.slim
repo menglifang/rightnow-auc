@@ -1,3 +1,6 @@
 #content
-  p 恭喜您！您已经登录成功。
-  p= link_to '注销', destroy_user_session_path, method: :delete
+  - if current_user
+    p 恭喜您！您已经登录成功。
+    p= link_to '注销', destroy_user_session_path, method: :delete
+  - else
+    p= link_to '登录', new_user_session_path
