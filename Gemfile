@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.1'
 
@@ -40,9 +40,12 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'slim'
 gem 'client_side_validations'
+gem 'doorkeeper'
+gem 'default_value_for'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'quiet_assets'
   gem 'pry'
 end
 
@@ -51,4 +54,5 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'fivemat'
 end
