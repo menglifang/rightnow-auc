@@ -8,13 +8,9 @@ Doorkeeper.configure do
   # If you want to restrict the access to the web interface for
   # adding oauth authorized applications you need to declare the
   # block below
-  # admin_authenticator do |routes|
-  #   # Put your admin authentication logic here.
-  #   # If you want to use named routes from your app you need
-  #   # to call them on routes object eg.
-  #   # routes.new_admin_session_path
-  #   Admin.find_by_id(session[:admin_id]) || redirect_to(routes.new_admin_session_url)
-  # end
+   admin_authenticator do |routes|
+     (current_user && current_user.admin?) || redirect_to(routes.new_user_session_url)
+   end
 
   # Access token expiration time (default 2 hours).
   # If you want to disable expiration, set this to nil.
