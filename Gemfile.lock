@@ -71,6 +71,7 @@ GEM
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
     ffi (1.0.11)
+    fivemat (1.0.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -180,6 +181,7 @@ DEPENDENCIES
   devise
   doorkeeper
   factory_girl_rails
+  fivemat
   jquery-rails
   mysql2
   pry

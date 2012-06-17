@@ -54,4 +54,5 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'fivemat'
 end
