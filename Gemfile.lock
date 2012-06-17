@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (3.2.1)
       actionpack (= 3.2.1)
@@ -53,6 +53,7 @@ GEM
       execjs
     coffee-script-source (1.2.0)
     database_cleaner (0.7.1)
+    default_value_for (2.0.1)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -175,6 +176,7 @@ DEPENDENCIES
   client_side_validations
   coffee-rails (~> 3.2.1)
   database_cleaner
+  default_value_for
   devise
   doorkeeper
   factory_girl_rails

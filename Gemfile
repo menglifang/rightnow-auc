@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.1'
 
@@ -41,6 +41,7 @@ gem 'devise'
 gem 'slim'
 gem 'client_side_validations'
 gem 'doorkeeper'
+gem 'default_value_for'
 
 group :development, :test do
   gem 'rspec-rails'
