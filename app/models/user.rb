@@ -10,10 +10,6 @@ class User < ActiveRecord::Base
   default_value_for :role, :user
 
   def admin?
-    role == :admin
-  end
-
-  def role
-    super[:role].to_sym
+    role.to_sym == :admin
   end
 end
