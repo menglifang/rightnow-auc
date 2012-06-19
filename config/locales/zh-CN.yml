@@ -3,10 +3,12 @@
   titles:
     sign_up: 注册
     sign_in: 登录
+    authorization: 授权
 
   descriptions:
     sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
     sign_up: 支持使用第三方帐号登录，也可%{sign_in}？
+    authorization: 授予%{client_name}访问您账户的权限。
 
   links:
     sign_in: 立即登录
@@ -15,6 +17,12 @@
   buttons:
     sign_up: 注册
     sign_in: 登录
+    authorize: 授权
+    deny: 拒绝
+
+  authorization:
+    description: 授予%{client_name}以下权限：
+    user_info: 获取您的账户基本信息
 
   activerecord:
     models:

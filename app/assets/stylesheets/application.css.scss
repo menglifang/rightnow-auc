@@ -25,6 +25,8 @@ h1 {
 }
 
 h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
 
 p { margin: 0px; padding: 0px; }
 
@@ -50,6 +52,12 @@ button {
   border: none;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button.confirm {
+  background-color: #1BA1E2;
+  color: white;
 }
 
 .clear { clear: both; }
@@ -128,7 +136,7 @@ button {
     margin-left: 320px;
   }
 
-  #sign-up {
+  #sign-up, #authorization {
     margin-top: 48px;
     padding-top: 24px;
     padding-right: 10px;
@@ -171,6 +179,26 @@ button {
         margin-bottom: 10px;
         float: left;
         background-color: #1BA1E2;
+      }
+    }
+  }
+
+  #authorization {
+    .description {
+      margin-left: 270px;
+      margin-top: 24px;
+      ul {
+        margin-top: 24px;
+        margin-left: 40px;
+        li { line-height: 24px; }
+      }
+    }
+    .actions {
+      margin-top: 144px;
+      margin-left: 540px;
+      button {
+        float: left;
+        margin: 0px 5px;
       }
     }
   }
