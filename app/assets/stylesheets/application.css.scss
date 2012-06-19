@@ -13,10 +13,7 @@ body {
   line-height: 24px;
   margin: 0px;
   padding: 0px;
-}
-
-h1, h2 {
-  font-family: 微软雅黑,黑体,宋体
+  font-family: 微软雅黑,黑体,宋体;
 }
 
 h1 {
@@ -89,7 +86,6 @@ button {
       display: block;
       text-align: right;
       font-size: 24px;
-      font-weight: bold;
       line-height: 48px;
       float: left;
     }
