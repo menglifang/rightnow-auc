@@ -13,7 +13,7 @@ body {
   line-height: 24px;
   margin: 0px;
   padding: 0px;
-  font-family: 微软雅黑,黑体,宋体;
+  font-family: 微软雅黑,黑体,宋体
 }
 
 h1 {
@@ -22,6 +22,8 @@ h1 {
 }
 
 h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
 
 p { margin: 0px; padding: 0px; }
 
@@ -47,6 +49,12 @@ button {
   border: none;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button.confirm {
+  background-color: #1BA1E2;
+  color: white;
 }
 
 .clear { clear: both; }
@@ -55,10 +63,11 @@ button {
 #content {
   width: 960px;
   height: 650px;
-  padding: 48px 85px 50px 85px;
+  padding: 48px 90px 50px 90px;
   margin: 0 auto;
 
   #header {
+    margin: 0 5px;
     height: 72px;
 
     .left {
@@ -124,8 +133,8 @@ button {
     margin-left: 320px;
   }
 
-  #sign-up {
-    margin-top: 48px;
+  #sign-up, #authorization {
+    margin: 48px 5px 0px 5px;
     padding-top: 24px;
     padding-right: 10px;
     height: 312px;
@@ -133,7 +142,7 @@ button {
   }
 
   #sign-in {
-    margin-top: 48px;
+    margin: 48px 5px 0px 5px;
     padding-top: 24px;
     width: 630px;
     height: 312px;
@@ -171,7 +180,68 @@ button {
     }
   }
 
+  #authorization {
+    .description {
+      margin-left: 270px;
+      margin-top: 24px;
+      ul {
+        margin-top: 24px;
+        margin-left: 40px;
+        li { line-height: 24px; }
+      }
+    }
+    .actions {
+      margin-top: 144px;
+      margin-left: 540px;
+      button {
+        float: left;
+        margin: 0px 5px;
+      }
+    }
+  }
+
   #footer {
-    margin-top: 96px;
+    margin-top: 48px;
+    margin-left: 5px;
+  }
+
+  #users {
+    width: 900px;
+    height: 360px;
+    margin-top: 48px;
+    .pagination {
+      clear: both;
+      margin-right: 5px;
+      text-align: right;
+    }
+    ul {
+      height: 360px;
+      li.user-card {
+        display: block;
+        background-color: white;
+        width: 170px;
+        height: 96px;
+        margin: 0px 5px 24px 5px;
+        float: left;
+        div.indicator {
+          float: left;
+          height: 96px;
+          width: 5px;
+          background-color: #f09609;
+        }
+        div.avatar {
+          float: right;
+          margin: 8px;
+        }
+        div.email {
+          color: #555;
+          position: relative;
+          top: 48px;
+          font-size: 11px;
+          line-height: 24px;
+          padding-left: 10px;
+        }
+      }
+    }
   }
 }

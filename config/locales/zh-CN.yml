@@ -1,12 +1,20 @@
 'zh-CN':
+  will_paginate:
+    previous_label: "上一页"
+    next_label: "下一页"
   copyright: '&copy; 2011-2012 北京梦立方网络科技有限公司 版权所有'
   titles:
     sign_up: 注册
     sign_in: 登录
+    sign_out: 注销
+    authorization: 授权
+    list_users: 用户列表
 
   descriptions:
     sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
     sign_up: 支持使用第三方帐号登录，也可%{sign_in}？
+    authorization: 授予%{client_name}访问您账户的权限。
+    list_users: 分页列出系统所有注册用户，方便对用户进行管理。
 
   links:
     sign_in: 立即登录
@@ -15,6 +23,12 @@
   buttons:
     sign_up: 注册
     sign_in: 登录
+    authorize: 授权
+    deny: 拒绝
+
+  authorization:
+    description: 授予%{client_name}以下权限：
+    user_info: 获取您的账户基本信息
 
   activerecord:
     models:

@@ -1,6 +1,7 @@
 zh-CN:
   errors:
     messages:
+      not_accessible_application: "您没有访问该应用的权限"
       expired: "您已过期，请重新申请"
       not_found: "没有找到"
       already_confirmed: "已经确认，请重新登录."

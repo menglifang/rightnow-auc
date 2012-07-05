@@ -1,11 +1,7 @@
 #content
   #header
-    .left
-      h1= t 'titles.sign_up'
-      p= t('descriptions.sign_up', sign_in: "<a href='#{new_user_session_path}'>#{t('links.sign_in')}</a>").html_safe
-    .right
-      h1= t 'titles.sign_in'
-      a{href=new_user_session_path}: img{src=image_path("icons/metro/white_with_circle/Right.png")}
+    = render_cell(:header, :left, title: t('titles.sign_up'), description: t('descriptions.sign_up', sign_in: "<a href='#{new_user_session_path}'>#{t('links.sign_in')}</a>").html_safe)
+    = render_cell(:header, :right, title: t('titles.sign_in'), out_link: new_user_session_path)
   #sign-up.clear
     = form_for(resource, :url => registration_path(resource_name), :validate => true) do |f|
       div.field
@@ -19,5 +15,4 @@
         = f.password_field :password_confirmation
       div.actions
         button type="submit"= t 'buttons.sign_up'
-  #footer
-    #copyright= t('copyright').html_safe
+  = render_cell :footer, :display
