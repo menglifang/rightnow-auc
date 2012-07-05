@@ -5,7 +5,7 @@ Doorkeeper.configure do
     current_user || warden.authenticate!(:scope => :user)
 
     application = Doorkeeper::Application.find_by_uid(authorization_params[:client_id])
-    if current_user.has_access_to?(application)
+    if current_user.admin? || current_user.has_access_to?(application)
       current_user
     else
       sign_out(current_user)
