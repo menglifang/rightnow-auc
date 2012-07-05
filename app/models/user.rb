@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :accessions, dependent: :destroy
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
 
@@ -11,5 +13,9 @@ class User < ActiveRecord::Base
 
   def admin?
     role.to_sym == :admin
+  end
+
+  def has_access_to?(app)
+    accessions.exists?(id: app.id)
   end
 end
