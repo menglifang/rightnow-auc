@@ -42,6 +42,7 @@ gem 'slim'
 gem 'client_side_validations'
 gem 'doorkeeper'
 gem 'default_value_for'
+gem 'cells'
 
 group :development, :test do
   gem 'rspec-rails'
