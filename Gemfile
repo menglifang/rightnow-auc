@@ -43,6 +43,7 @@ gem 'client_side_validations'
 gem 'doorkeeper'
 gem 'default_value_for'
 gem 'cells'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'rspec-rails'
