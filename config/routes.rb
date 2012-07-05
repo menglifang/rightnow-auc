@@ -9,5 +9,7 @@ RightnowAuc::Application.routes.draw do
     end
   end
 
+  resources :users, only: :index
+
   root to: 'home#show'
 end
