@@ -1,7 +1,7 @@
 /*
  *= require_tree .
  *= require_self
-*/
+ */
 
 body {
   background-color: #2f4009;
@@ -66,6 +66,7 @@ button.confirm {
   width: 170px;
   height: 96px;
   margin: 0px 5px 24px 5px;
+  position: relative;
   float: left;
   div.indicator {
     float: left;
@@ -93,6 +94,56 @@ button.confirm {
         font-size: 11px;
       }
     }
+  }
+  .mask {
+    width: 165px;
+    height: 96px;
+    background: #000;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* opacity setting */
+    filter: alpha(opacity=50);    /* ie  */
+    -moz-opacity: 0.5;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.5;    /* for really really old safari */ 
+    opacity: 0.5;    /* css standard, currently it works in most modern browsers like firefox,  */
+  }
+  .caption {
+    width: 165px;
+    height: 96px;
+    text-align: right;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* hide it by default */
+    display: none;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+
+    img {
+      margin: 24px 8px;
+    }
+  }
+
+  .accessible {
+    background: #000;
+  }
+  .inaccessible {
+    background: #f00;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
   }
 }
 
@@ -157,7 +208,7 @@ button.confirm {
       background: red image_url('icons/metro/white_with_circle/Error.png') no-repeat left;
       background-size: 24px 24px;
       background-position: 10px;
-      
+
     }
   }
   .alert {

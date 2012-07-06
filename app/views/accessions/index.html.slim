@@ -1,0 +1,24 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.list_accessions'), description: t('descriptions.list_accessions'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: destroy_user_session_path)
+
+  #applications.clear
+    ul
+      - @accessions.each do |accession|
+        li.card
+          div.indicator
+          div.intro
+            div.avatar= image_tag("avatar.png")
+            div.brief= accession.application.name
+          div.caption.accessible= link_to image_tag("certificate_broke.png"), user_accession_path(@user, accession), method: :delete
+
+      - @inaccessible_applications.each do |app|
+        li.card
+          div.indicator
+          div.intro
+            div.avatar= image_tag("avatar.png")
+            div.brief= app.name
+          div.mask
+          div.caption.inaccessible= link_to image_tag("certificate_add.png"), user_accessions_path(@user, application_id: app.id), method: :post
+  = render_cell :footer, :display

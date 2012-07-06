@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def has_access_to?(app)
-    accessions.exists?(id: app.id)
+    accessions.exists?(application_id: app.id)
   end
 
   def brief

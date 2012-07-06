@@ -10,6 +10,7 @@
     authorization: 授权
     list_users: 用户列表
     list_accesible_applications: 可访问应用
+    list_accessions: 应用授权
 
   descriptions:
     sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
@@ -17,6 +18,7 @@
     authorization: 授予%{client_name}访问您账户的权限。
     list_users: 分页列出系统所有注册用户，方便对用户进行管理。
     list_accesible_applications: 通过点击应用，可以直接跳装到该应用。
+    list_accessions: 快捷的授予/取消用户访问应用的权限。
 
   links:
     sign_in: 立即登录
