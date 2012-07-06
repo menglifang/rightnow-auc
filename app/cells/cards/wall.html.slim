@@ -1,0 +1,4 @@
+ul
+  - @cards.each do |card|
+    = render_cell :cards, :card, card: card, brief: @brief
+= will_paginate @cards
