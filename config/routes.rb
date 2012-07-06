@@ -10,6 +10,7 @@ RightnowAuc::Application.routes.draw do
   end
 
   resources :users, only: :index
+  resources :accessible_applications, only: :index
 
   root to: 'home#show'
 end

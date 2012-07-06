@@ -1,0 +1,8 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.list_accesible_applications'), description: t('descriptions.list_accesible_applications'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: destroy_user_session_path)
+
+  #applications.clear
+    = render_cell :cards, :wall, cards: @applications, brief: :name
+  = render_cell :footer, :display
