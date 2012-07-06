@@ -73,17 +73,21 @@ button.confirm {
     width: 5px;
     background-color: #f09609;
   }
-  div.avatar {
-    float: right;
-    margin: 8px;
-  }
-  div.brief {
-    color: #555;
-    position: relative;
-    top: 48px;
-    font-size: 11px;
-    line-height: 24px;
-    padding-left: 10px;
+  div.intro {
+    float: left;
+    height: 96px;
+    width: 165px;
+    div.avatar {
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+    }
+    div.brief {
+      color: #555;
+      font-size: 11px;
+      line-height: 24px;
+      padding-left: 8px;
+    }
   }
 }
 
