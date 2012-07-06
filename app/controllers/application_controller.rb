@@ -10,10 +10,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if resource.admin?
-      users_url
-    else
-      accessible_applications_url
-    end
+    stored_location_for(resource) ||
+      if resource.admin?
+        users_url
+      else
+        accessible_applications_url
+      end
   end
 end
