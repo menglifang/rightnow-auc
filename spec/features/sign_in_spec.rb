@@ -48,7 +48,7 @@ describe 'Sign in' do
         click_button '登录'
       end
 
-      page.should have_content '恭喜您！您已经登录成功。'
+      page.should have_content '可访问应用'
     end
   end
 end

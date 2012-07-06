@@ -1,0 +1,6 @@
+li.card
+  div.indicator
+  div.intro
+    div.avatar
+      img{src=image_path("avatar.png")}
+    div.brief= @card.send(:"#{@brief}")

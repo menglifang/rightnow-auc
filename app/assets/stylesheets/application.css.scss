@@ -60,6 +60,43 @@ button.confirm {
 .clear { clear: both; }
 .hidden { display: none; }
 
+.card {
+  display: block;
+  background-color: white;
+  width: 170px;
+  height: 96px;
+  margin: 0px 5px 24px 5px;
+  float: left;
+  div.indicator {
+    float: left;
+    height: 96px;
+    width: 5px;
+    background-color: #f09609;
+  }
+  div.intro {
+    float: left;
+    height: 96px;
+    width: 165px;
+    div.avatar {
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+    }
+    div.brief {
+      color: #555;
+      font-size: 11px;
+      line-height: 24px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.center {
+  width: 900px;
+  height: 360px;
+  margin-top: 48px;
+}
+
 #content {
   width: 960px;
   height: 650px;
@@ -206,10 +243,8 @@ button.confirm {
     margin-left: 5px;
   }
 
-  #users {
-    width: 900px;
-    height: 360px;
-    margin-top: 48px;
+  #users, #applications {
+    @extend .center;
     .pagination {
       clear: both;
       margin-right: 5px;
@@ -217,32 +252,6 @@ button.confirm {
     }
     ul {
       height: 360px;
-      li.user-card {
-        display: block;
-        background-color: white;
-        width: 170px;
-        height: 96px;
-        margin: 0px 5px 24px 5px;
-        float: left;
-        div.indicator {
-          float: left;
-          height: 96px;
-          width: 5px;
-          background-color: #f09609;
-        }
-        div.avatar {
-          float: right;
-          margin: 8px;
-        }
-        div.email {
-          color: #555;
-          position: relative;
-          top: 48px;
-          font-size: 11px;
-          line-height: 24px;
-          padding-left: 10px;
-        }
-      }
     }
   }
 }

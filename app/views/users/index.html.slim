@@ -4,12 +4,6 @@
     = render_cell(:header, :right, title: t('titles.sign_out'), out_link: destroy_user_session_path)
 
   #users.clear
-    ul
-      - @users.each do |user|
-        li.user-card
-          div.indicator
-          div.avatar
-            img{src=image_path("avatar.png")}
-          div.email= user.email
-    = will_paginate @users
+    = render_cell :cards, :wall, cards: @users
+
   = render_cell :footer, :display
