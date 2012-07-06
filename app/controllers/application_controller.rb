@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     if resource.admin?
       users_url
     else
-      root_url
+      accessible_applications_url
     end
   end
 end
