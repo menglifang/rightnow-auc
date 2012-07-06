@@ -87,6 +87,11 @@ button.confirm {
       font-size: 11px;
       line-height: 24px;
       padding-left: 8px;
+      /*background: #555;*/
+      a {
+        color: #555;
+        font-size: 11px;
+      }
     }
   }
 }
