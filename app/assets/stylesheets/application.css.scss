@@ -158,74 +158,6 @@ button.confirm {
   }
 }
 
-.application {
-  display: block;
-  background-color: white;
-  width: 390px;
-  height: 144px;
-  margin: 0px 5px 24px 5px;
-  position: relative;
-  float: left;
-  div.indicator {
-    float: left;
-    height: 144px;
-    width: 5px;
-    background-color: #f09609;
-  }
-  div.intro {
-    float: left;
-    height: 96px;
-    width: 385px;
-    margin: 24px 0px;
-    ul {
-      width: 385px;
-      height: 96px;
-      li {
-        list-style: none;
-        div.label {
-          font-size: 14px;
-          font-weight: bold;
-          float: left;
-          color: #555;
-          width: 60px;
-          text-align: right;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-  div.avatar {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  }
-  .caption {
-    width: 165px;
-    height: 48px;
-    text-align: right;
-    background-color: black;
-
-    /* fix it at the bottom */
-    position: absolute;
-    left: 5px;
-
-    /* hide it by default */
-    display: none;
-
-    /* opacity setting */
-    filter: alpha(opacity=80);    /* ie  */
-    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
-    -khtml-opacity: 0.8;    /* for really really old safari */ 
-    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
-
-    padding: 48px 110px 48px 110px;
-
-    img {
-      margin: 0px 16px;
-    }
-  }
-}
-
 .center {
   width: 800px;
   height: 360px;
@@ -241,6 +173,19 @@ button.confirm {
   width: 960px;
   height: 650px;
   margin: 48px auto;
+
+  #toolbar {
+    position: absolute;
+    top: 120px;
+    margin: 0 85px;
+    width: 790px;
+    height: 48px;
+    text-align: right;
+    li {
+      list-style: none;
+      line-height: 32px;
+    }
+  }
 
   #header {
     margin: 0 85px;
@@ -391,7 +336,7 @@ button.confirm {
       margin: 0 5px;
       text-align: right;
     }
-    ul {
+    > ul {
       width: 800px;
       height: 360px;
     }
@@ -404,4 +349,73 @@ button.confirm {
     width: 390px;
   }
 }
+
+.application {
+  display: block;
+  background-color: white;
+  width: 390px;
+  height: 144px;
+  margin: 0px 5px 24px 5px;
+  position: relative;
+  float: left;
+  div.indicator {
+    float: left;
+    height: 144px;
+    width: 5px;
+    background-color: #f09609;
+  }
+  div.intro {
+    float: left;
+    height: 96px;
+    width: 385px;
+    margin: 24px 0px;
+    ul {
+      width: 385px;
+      height: 96px;
+      li {
+        list-style: none;
+        div.label {
+          font-size: 14px;
+          font-weight: bold;
+          float: left;
+          color: #555;
+          width: 60px;
+          text-align: right;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  div.avatar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .caption {
+    width: 165px;
+    height: 48px;
+    text-align: right;
+    background-color: black;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* hide it by default */
+    display: none;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+
+    padding: 48px 110px 48px 110px;
+
+    img {
+      margin: 0px 16px;
+    }
+  }
+}
+
 
