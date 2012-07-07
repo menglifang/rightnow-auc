@@ -5,9 +5,6 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -44,11 +41,13 @@ gem 'doorkeeper'
 gem 'default_value_for'
 gem 'cells'
 gem 'will_paginate'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'quiet_assets'
   gem 'pry'
+  gem 'heroku'
 end
 
 group :test do
