@@ -26,9 +26,22 @@ body {
   color: #555;
 }
 
+.app-square {
+  width: 70px;
+  height: 70px;
+  list-style-type: none;
+  float: left;
+  margin: 0px 5px 10px 5px;
+  background-color: #1BA1E2;
+  img {
+    margin: 8px;
+  }
+}
+
 h1 {
   font-size: 48px;
   line-height: 48px;
+  height: 48px;
 }
 
 h2 { font-size: 36px; }
@@ -192,17 +205,24 @@ button.confirm {
     height: 72px;
 
     .left {
+      width: 390px;
+      span {
+        float: left;
+        display: block;
+        font-size: 48px;
+        line-height: 56px;
+      }
       float: left;
-      line-height: 24px;
     }
     .right {
       float: right;
       height: 48px;
       width: 150px;
-      h1 {
+      span {
         float: left;
-        height: 48px;
-        margin-right: 5px;
+        display: block;
+        font-size: 48px;
+        line-height: 56px;
       }
     }
   }
