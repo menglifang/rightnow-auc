@@ -8,12 +8,4 @@ class ApplicationController < ActionController::Base
       instance_eval &block
     end
   end
-
-  def after_sign_in_path_for(resource)
-    if resource.admin?
-      users_url
-    else
-      stored_location_for(resource) || accessible_applications_url
-    end
-  end
 end
