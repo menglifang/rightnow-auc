@@ -8,22 +8,10 @@
 
 测试地址：[http://rightnow-auc.herokuapp.com](http://rightnow-auc.herokuapp.com)
 
-<table>
-  <thead>
-    <th>用户名</th>
-    <th>密码</th>
-    <th>管理员</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>admin@example.org</td>
-      <td>123456</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <td>user@example.org</td>
-      <td>123456</td>
-      <td>N</td>
-    </tr>
-  </tbody>
-</table>
+---------------------------------------
+| 用户名            | 密码   | 管理员 |
+---------------------------------------
+| admin@example.org | 123456 | Y      |
+---------------------------------------
+| user@example.org  | 123456 | N      |
+---------------------------------------
