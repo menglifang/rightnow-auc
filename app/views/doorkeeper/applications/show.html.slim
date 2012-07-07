@@ -1,0 +1,24 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.show_application'), description: t('descriptions.show_application'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: main_app.destroy_user_session_path)
+
+  #application.center-yellow.clear
+    = form_for(@application) do |f|
+      .field
+        = f.label :name, t('activerecord.attributes.application.name')
+        = f.text_field :name, readonly: true
+      .field
+        = f.label :redirect_uri, t('activerecord.attributes.application.redirect_uri')
+        = f.text_field :redirect_uri, readonly: true
+      .field
+        = f.label :uid, t('activerecord.attributes.application.uid')
+        = f.text_field :uid, readonly: true
+      .field
+        = f.label :secret, t('activerecord.attributes.application.secret')
+        = f.text_field :secret, readonly: true
+      .actions
+        = link_to t('links.edit'), edit_application_path(@application)
+        = link_to t('links.delete'), application_path(@application), method: :delete
+        = link_to t('links.back'), applications_path
+  = render_cell :footer, :display

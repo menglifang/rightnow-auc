@@ -1,0 +1,8 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.edit_application'), description: t('descriptions.edit_application'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: main_app.destroy_user_session_path)
+
+  #application.center-yellow.clear
+    = render 'form', application: @application
+  = render_cell :footer, :display
