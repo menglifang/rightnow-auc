@@ -16,6 +16,7 @@
     edit_application: 编辑应用
     show_application: 查看应用
     new_application: 创建应用
+    home: 主页
 
   descriptions:
     sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
