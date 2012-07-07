@@ -3,6 +3,8 @@
     = render_cell(:header, :left, title: t('titles.manage_applications'), description: t('descriptions.manage_applications'))
     = render_cell(:header, :right, title: t('titles.sign_out'), out_link: main_app.destroy_user_session_path)
 
+  = render_cell(:toolbar, :display, buttons: [{ icon: 'add.png', text: t('links.new_application'), url: new_application_path }])
+
   #applications.clear
     ul
       - @applications.each do |app|
