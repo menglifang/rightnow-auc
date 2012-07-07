@@ -1,4 +1,4 @@
 .right
-  h1= @title
-  - if @out_link
-    a{href=@out_link}: img{src=image_path("icons/metro/white_with_circle/Right.png")}
+  h1
+    span= @title
+    span= link_to image_tag('icons/metro/white_with_circle/Right.png'), @out_link if @out_link

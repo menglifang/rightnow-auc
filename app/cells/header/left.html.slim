@@ -1,3 +1,5 @@
 .left
-  h1= @title
-  p= @description
+  h1
+    span= link_to image_tag('home.png'), '/'
+    span= @title
+  p.clear= @description if @description
