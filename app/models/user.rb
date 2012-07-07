@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :accessions, dependent: :destroy
+  has_many :applications, through: :accessions
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
@@ -16,6 +17,10 @@ class User < ActiveRecord::Base
   end
 
   def has_access_to?(app)
-    accessions.exists?(id: app.id)
+    accessions.exists?(application_id: app.id)
+  end
+
+  def brief
+    email
   end
 end

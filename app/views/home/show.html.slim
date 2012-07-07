@@ -1,6 +1,10 @@
 #content
-  - if user_signed_in?
-    p 恭喜您！您已经登录成功。
-    p= link_to '注销', destroy_user_session_path
-  - else
-    p= link_to '登录', new_user_session_path
+  #header
+    = render_cell(:header, :left, title: t('titles.home'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: destroy_user_session_path)
+
+  .center
+    ul
+      li.app-square= link_to image_tag('user.png'), users_path
+      li.app-square= link_to image_tag('node.png'), doorkeeper.applications_path
+  = render_cell :footer, :display

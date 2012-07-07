@@ -6,10 +6,11 @@
   #users.clear
     ul
       - @users.each do |user|
-        li.user-card
+        li.card
           div.indicator
-          div.avatar
-            img{src=image_path("avatar.png")}
-          div.email= user.email
+          div.intro
+            div.avatar= image_tag("avatar.png")
+            div.brief= link_to user.brief, user_accessions_path(user)
     = will_paginate @users
+
   = render_cell :footer, :display

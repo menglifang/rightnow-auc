@@ -1,0 +1,15 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.list_accesible_applications'), description: t('descriptions.list_accesible_applications'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: destroy_user_session_path)
+
+  #applications.clear
+    ul
+      - @applications.each do |app|
+        li.card
+          div.indicator
+          div.intro
+            div.avatar
+              img{src=image_path("avatar.png")}
+            div.brief= link_to(app.name, app.url)
+  = render_cell :footer, :display

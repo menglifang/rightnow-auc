@@ -9,7 +9,11 @@ RightnowAuc::Application.routes.draw do
     end
   end
 
-  resources :users, only: :index
+  resource :home, only: :show
+  resources :users, only: :index do
+    resources :accessions, only: [:index, :create, :destroy]
+  end
+  resources :accessible_applications, only: :index
 
   root to: 'home#show'
 end

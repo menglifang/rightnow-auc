@@ -1,4 +1,5 @@
 'zh-CN':
+  labels: 
   will_paginate:
     previous_label: "上一页"
     next_label: "下一页"
@@ -9,14 +10,32 @@
     sign_out: 注销
     authorization: 授权
     list_users: 用户列表
+    list_accesible_applications: 可访问应用
+    list_accessions: 应用授权
+    manage_applications: 应用管理
+    edit_application: 编辑应用
+    show_application: 查看应用
+    new_application: 创建应用
+    home: 主页
 
   descriptions:
     sign_in: 支持使用第三方帐号登录，现在%{sign_up}？
     sign_up: 支持使用第三方帐号登录，也可%{sign_in}？
     authorization: 授予%{client_name}访问您账户的权限。
     list_users: 分页列出系统所有注册用户，方便对用户进行管理。
+    list_accesible_applications: 通过点击应用，可以直接跳装到该应用。
+    list_accessions: 快捷的授予/取消用户访问应用的权限。
+    manage_applications: 登记、删除、更新和查看应该。
+    edit_application: 编辑应用的相关信息。
+    show_application: 查看应用的详细信息。
+    new_application: 登记新的应用。
 
   links:
+    new_application: 登记应用
+    back: 返回
+    cancel: 取消
+    delete: 删除
+    edit: 编辑
     sign_in: 立即登录
     sign_up: 立即注册
 
@@ -25,6 +44,7 @@
     sign_in: 登录
     authorize: 授权
     deny: 拒绝
+    save: 保存
 
   authorization:
     description: 授予%{client_name}以下权限：
@@ -40,6 +60,11 @@
         password: 密码
         password_confirmation: 密码确认
         remember_me: 下次自动登录
+      application:
+        name: 名称
+        redirect_uri: 回调地址
+        uid: 应用编号
+        secret: 应用密钥
     
     errors:
       models:

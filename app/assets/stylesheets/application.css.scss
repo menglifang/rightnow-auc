@@ -1,7 +1,7 @@
 /*
  *= require_tree .
  *= require_self
-*/
+ */
 
 body {
   background-color: #2f4009;
@@ -16,9 +16,32 @@ body {
   font-family: 微软雅黑,黑体,宋体
 }
 
+.font9 {
+  font-size: 9px;
+  color: #555;
+}
+
+.font12 {
+  font-size: 14px;
+  color: #555;
+}
+
+.app-square {
+  width: 70px;
+  height: 70px;
+  list-style-type: none;
+  float: left;
+  margin: 0px 5px 10px 5px;
+  background-color: #1BA1E2;
+  img {
+    margin: 8px;
+  }
+}
+
 h1 {
   font-size: 48px;
   line-height: 48px;
+  height: 48px;
 }
 
 h2 { font-size: 36px; }
@@ -50,6 +73,7 @@ button {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  margin: 0px 10px 10px 0px;
 }
 
 button.confirm {
@@ -60,28 +84,145 @@ button.confirm {
 .clear { clear: both; }
 .hidden { display: none; }
 
+.card {
+  display: block;
+  background-color: white;
+  width: 150px;
+  height: 96px;
+  margin: 0px 5px 24px 5px;
+  position: relative;
+  float: left;
+  div.indicator {
+    float: left;
+    height: 96px;
+    width: 5px;
+    background-color: #f09609;
+  }
+  div.intro {
+    float: left;
+    height: 96px;
+    width: 145px;
+    div.avatar {
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+    }
+    div.brief {
+      color: #555;
+      font-size: 11px;
+      line-height: 24px;
+      padding-left: 8px;
+      /*background: #555;*/
+      a {
+        color: #555;
+        font-size: 11px;
+      }
+    }
+  }
+  .mask {
+    width: 145px;
+    height: 96px;
+    background: #000;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* opacity setting */
+    filter: alpha(opacity=50);    /* ie  */
+    -moz-opacity: 0.5;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.5;    /* for really really old safari */ 
+    opacity: 0.5;    /* css standard, currently it works in most modern browsers like firefox,  */
+  }
+  .caption {
+    width: 145px;
+    height: 96px;
+    text-align: right;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* hide it by default */
+    display: none;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+
+    img {
+      margin: 24px 8px;
+    }
+  }
+
+  .accessible {
+    background: #000;
+  }
+  .inaccessible {
+    background: #f00;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+  }
+}
+
+.center {
+  width: 800px;
+  height: 360px;
+  margin: 48px 80px 0px 80px;
+}
+
+.center-yellow {
+  @extend .center;
+  background-color: #f09609;
+}
+
 #content {
   width: 960px;
   height: 650px;
-  padding: 48px 90px 50px 90px;
-  margin: 0 auto;
+  margin: 48px auto;
+
+  #toolbar {
+    position: absolute;
+    top: 120px;
+    margin: 0 85px;
+    width: 790px;
+    height: 48px;
+    text-align: right;
+    li {
+      list-style: none;
+      line-height: 32px;
+    }
+  }
 
   #header {
-    margin: 0 5px;
+    margin: 0 85px;
     height: 72px;
 
     .left {
+      width: 390px;
+      span {
+        float: left;
+        display: block;
+        font-size: 48px;
+        line-height: 56px;
+      }
       float: left;
-      line-height: 24px;
     }
     .right {
       float: right;
       height: 48px;
       width: 150px;
-      h1 {
+      span {
         float: left;
-        height: 48px;
-        margin-right: 5px;
+        display: block;
+        font-size: 48px;
+        line-height: 56px;
       }
     }
   }
@@ -91,7 +232,7 @@ button.confirm {
     margin-top: 6px;
     margin-bottom: 6px;
     label {
-      width: 310px;
+      width: 230px;
       display: block;
       text-align: right;
       font-size: 24px;
@@ -114,12 +255,12 @@ button.confirm {
       background: red image_url('icons/metro/white_with_circle/Error.png') no-repeat left;
       background-size: 24px 24px;
       background-position: 10px;
-      
+
     }
   }
   .alert {
     margin-top: 24px;
-    margin-left: 320px;
+    margin-left: 240px;
     padding-left: 40px;
     width: 260px;
     height: 36px;
@@ -130,11 +271,14 @@ button.confirm {
   }
   .actions {
     margin-top: 24px;
-    margin-left: 320px;
+    margin-left: 240px;
+    a {
+      margin: 0px 10px 10px 0px;
+    }
   }
 
   #sign-up, #authorization {
-    margin: 48px 5px 0px 5px;
+    margin: 48px 85px 0px 85px;
     padding-top: 24px;
     padding-right: 10px;
     height: 312px;
@@ -142,9 +286,9 @@ button.confirm {
   }
 
   #sign-in {
-    margin: 48px 5px 0px 5px;
+    margin: 48px 5px 0px 85px;
     padding-top: 24px;
-    width: 630px;
+    width: 550px;
     height: 312px;
     background-color: #f09609;
     float: left;
@@ -163,17 +307,17 @@ button.confirm {
 
   #third-party-sign-in {
     margin-top: 48px;
-    width: 320px;
+    margin-right: 85px;
+    width: 230px;
     height: 336px;
     float: right;
     ul {
-      margin-left: 80px;
+      /*margin-left: 80px;*/
       li {
         list-style-type: none;
         width: 105px;
         height: 105px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+        margin: 0px 5px 10px 5px;
         float: left;
         background-color: #1BA1E2;
       }
@@ -183,7 +327,7 @@ button.confirm {
   #authorization {
     .description {
       margin-left: 270px;
-      margin-top: 24px;
+      margin-top: 24px 85px 0px 85px;
       ul {
         margin-top: 24px;
         margin-left: 40px;
@@ -201,47 +345,96 @@ button.confirm {
   }
 
   #footer {
-    margin-top: 48px;
-    margin-left: 5px;
+    margin: 48px 85px 0px 85px;
   }
 
-  #users {
-    width: 900px;
-    height: 360px;
-    margin-top: 48px;
+  #users, #applications {
+    @extend .center;
     .pagination {
       clear: both;
-      margin-right: 5px;
+      margin: 0 5px;
       text-align: right;
     }
-    ul {
+    > ul {
+      width: 800px;
       height: 360px;
-      li.user-card {
-        display: block;
-        background-color: white;
-        width: 170px;
-        height: 96px;
-        margin: 0px 5px 24px 5px;
-        float: left;
-        div.indicator {
+    }
+  }
+}
+
+#application {
+  padding-top: 24px;
+  .field input {
+    width: 390px;
+  }
+}
+
+.application {
+  display: block;
+  background-color: white;
+  width: 390px;
+  height: 144px;
+  margin: 0px 5px 24px 5px;
+  position: relative;
+  float: left;
+  div.indicator {
+    float: left;
+    height: 144px;
+    width: 5px;
+    background-color: #f09609;
+  }
+  div.intro {
+    float: left;
+    height: 96px;
+    width: 385px;
+    margin: 24px 0px;
+    ul {
+      width: 385px;
+      height: 96px;
+      li {
+        list-style: none;
+        div.label {
+          font-size: 14px;
+          font-weight: bold;
           float: left;
-          height: 96px;
-          width: 5px;
-          background-color: #f09609;
-        }
-        div.avatar {
-          float: right;
-          margin: 8px;
-        }
-        div.email {
           color: #555;
-          position: relative;
-          top: 48px;
-          font-size: 11px;
-          line-height: 24px;
-          padding-left: 10px;
+          width: 60px;
+          text-align: right;
+          margin-right: 5px;
         }
       }
     }
   }
+  div.avatar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .caption {
+    width: 165px;
+    height: 48px;
+    text-align: right;
+    background-color: black;
+
+    /* fix it at the bottom */
+    position: absolute;
+    left: 5px;
+
+    /* hide it by default */
+    display: none;
+
+    /* opacity setting */
+    filter: alpha(opacity=80);    /* ie  */
+    -moz-opacity: 0.8;    /* old mozilla browser like netscape  */
+    -khtml-opacity: 0.8;    /* for really really old safari */ 
+    opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+
+    padding: 48px 110px 48px 110px;
+
+    img {
+      margin: 0px 16px;
+    }
+  }
 }
+
+

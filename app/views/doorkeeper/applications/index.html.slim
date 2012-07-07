@@ -1,0 +1,31 @@
+#content
+  #header
+    = render_cell(:header, :left, title: t('titles.manage_applications'), description: t('descriptions.manage_applications'))
+    = render_cell(:header, :right, title: t('titles.sign_out'), out_link: main_app.destroy_user_session_path)
+
+  = render_cell(:toolbar, :display, buttons: [{ icon: 'add.png', text: t('links.new_application'), url: new_application_path }])
+
+  #applications.clear
+    ul
+      - @applications.each do |app|
+        li.application
+          .indicator
+          .intro
+            ul
+              li
+                .label= t('activerecord.attributes.application.name')
+                .font12= app.name
+              li
+                .label= t('activerecord.attributes.application.redirect_uri')
+                .font12= app.redirect_uri
+              li
+                .label= t('activerecord.attributes.application.uid')
+                .font9= app.uid
+              li
+                .label= t('activerecord.attributes.application.secret')
+                .font9= app.secret
+          .avatar= image_tag("avatar.png")
+          .caption
+            = link_to image_tag("edit.png"), edit_application_path(app)
+            = link_to image_tag("delete.png"), application_path(app), method: :delete
+  = render_cell :footer, :display

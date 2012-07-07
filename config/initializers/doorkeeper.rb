@@ -1,3 +1,5 @@
+require 'doorkeeper/application_extension'
+
 Doorkeeper.configure do
   # This block will be called to check whether the
   # resource owner is authenticated or not

@@ -1,0 +1,19 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: postgres
+  reconnect: false
+
+development:
+  <<: *common
+  database: rightnow-auc_development
+
+test:
+  <<: *common
+  database: rightnow-auc_test
+
+production:
+  <<: *common
+  database: rightnow-auc_production

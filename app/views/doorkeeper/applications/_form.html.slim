@@ -1,0 +1,10 @@
+= form_for(application) do |f|
+  .field
+    = f.label :name, t('activerecord.attributes.application.name')
+    = f.text_field :name
+  .field
+    = f.label :redirect_uri, t('activerecord.attributes.application.redirect_uri')
+    = f.text_field :redirect_uri
+  .actions
+    button type="submit"= t('buttons.save')
+    = link_to t('links.cancel'), applications_path
