@@ -17,7 +17,7 @@ module Api
         if user.save
           render json: user, status: :created
         else
-          head :unprocessible_entity
+          head :unprocessable_entity
         end
       end
 
@@ -25,7 +25,7 @@ module Api
         user = User.find(params[:id])
 
         if user.id == current_resource_owner.id
-          head :forbidden
+          head :unauthorized
         else
           user.destroy
           head :ok

@@ -8,17 +8,17 @@ describe 'API', 'Deleting a user of an application', type: :request do
     let(:tower) { create(:user_of, application: twitter, email: 'tower@example.org') }
     let(:token) { create(:access_token, application: twitter, resource_owner_id: admin.id) }
 
-    it 'creates a user' do
+    it 'deletes the user' do
       delete "/api/applications/#{twitter.id}/users/#{tower.id}?access_token=#{token.token}"
 
       response.status.should == 200
     end
 
     context 'when trying to delete self' do
-      it 'returns an error' do
+      it 'responds with 401' do
         delete "/api/applications/#{twitter.id}/users/#{admin.id}?access_token=#{token.token}"
 
-        response.status.should == 403
+        response.status.should == 401
       end
     end
   end
