@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Listing users of an application', type: :request do
+describe 'API', 'Listing users of an application', type: :request do
   let(:twitter) { create(:application, name: 'Twitter') }
   let(:facebook) { create(:application, name: 'Facebook') }
 
