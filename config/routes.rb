@@ -5,7 +5,9 @@ RightnowAuc::Application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       resources :applications do
-        resources :users, only: [:index, :create, :destroy]
+        resources :users, only: [:index, :create, :destroy] do
+          resource :password, only: :update
+        end
       end
 
       get '/me' => "credentials#me"
