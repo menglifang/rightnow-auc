@@ -21,6 +21,17 @@ module Api
         end
       end
 
+      def destroy
+        user = User.find(params[:id])
+
+        if user.id == current_resource_owner.id
+          head :forbidden
+        else
+          user.destroy
+          head :ok
+        end
+      end
+
       private
 
       def application
