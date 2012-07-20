@@ -34,10 +34,6 @@ module Api
 
       private
 
-      def application
-        @application ||= Doorkeeper::Application.find(params[:application_id])
-      end
-
       def check_admin_of_app
         unless current_resource_owner.admin_of?(application)
           head :unauthorized
