@@ -2,9 +2,12 @@ RightnowAuc::Application.routes.draw do
   mount Doorkeeper::Engine => "/oauth"
 
   devise_for :users
+  namespace :api, defaults: { format: 'json' } do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :applications do
+        resources :users, only: [:index]
+      end
 
-  namespace :api do
-    namespace :v1 do
       get '/me' => "credentials#me"
     end
   end

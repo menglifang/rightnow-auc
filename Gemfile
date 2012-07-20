@@ -41,6 +41,7 @@ gem 'doorkeeper'
 gem 'default_value_for'
 gem 'cells'
 gem 'will_paginate'
+gem 'squeel'
 gem 'pg'
 
 group :development, :test do
@@ -56,4 +57,5 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'fivemat'
+  gem 'json_expressions'
 end

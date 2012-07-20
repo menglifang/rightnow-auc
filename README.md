@@ -4,6 +4,38 @@
 
 *申明* 目前`rightnow-auc`还处于早期开发阶段。
 
+### OmniAuth Strategy
+
+```ruby
+# lib/omniauth/strategies/rightnow_auc.rb
+module OmniAuth
+  module Strategies
+    class RightnowAuc < OmniAuth::Strategies::OAuth2
+      option :name, :rightnow_auc
+
+      option :client_options, {
+        :site => "http://your.rightnow-auc.app",
+        :authorize_path => "/oauth/authorize"
+      }
+
+      uid do
+        raw_info["id"]
+      end
+
+      info do
+        {
+          :email => raw_info["email"]
+        }
+      end
+
+      def raw_info
+        @raw_info ||= access_token.get('/api/me.json').parsed
+      end
+    end
+  end
+end
+```
+
 ### 在线演示
 
 测试地址：[http://rightnow-auc.herokuapp.com](http://rightnow-auc.herokuapp.com)

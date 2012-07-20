@@ -20,7 +20,19 @@ class User < ActiveRecord::Base
     accessions.exists?(application_id: app.id)
   end
 
+  def admin_of?(app)
+    accessions.exists?(application_id: app.id, admin: true)
+  end
+
   def brief
     email
+  end
+
+  class << self
+    def of_application(app)
+      User.joins(:applications).where(applications: { id: app.id })
+    end
+
+    alias of_app of_application
   end
 end
