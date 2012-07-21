@@ -14,7 +14,7 @@
             ul
               li
                 .label= t('activerecord.attributes.application.name')
-                .font12= app.name
+                .font12= "#{app.name} (#{app.key_name})"
               li
                 .label= t('activerecord.attributes.application.redirect_uri')
                 .font12= app.redirect_uri

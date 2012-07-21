@@ -62,12 +62,22 @@
         remember_me: 下次自动登录
       application:
         name: 名称
+        key_name: 标识符
         redirect_uri: 回调地址
         uid: 应用编号
         secret: 应用密钥
     
     errors:
       models:
+        'doorkeeper/application':
+          attributes:
+            name:
+              blank: 应用名称不能为空
+            key_name:
+              blank: 应用标识符不能为空
+              taken: 应用标识符已经存在
+            redirect_uri:
+              blank: 应用回调地址不能为空
         user:
           attributes:
             email:
