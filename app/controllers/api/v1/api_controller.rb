@@ -6,7 +6,11 @@ module Api::V1
 
     protected
     def application
-      @application ||= Doorkeeper::Application.find(params[:application_id])
+      @application ||= begin
+                         id_or_key_name = params[:application_id]
+                         Doorkeeper::Application.find_by_key_name(id_or_key_name) ||
+                           Doorkeeper::Application.find_by_id(id_or_key_name)
+                       end
     end
   end
 end
