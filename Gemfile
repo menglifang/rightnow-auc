@@ -49,6 +49,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'pry'
   gem 'heroku'
+  gem 'rda'
 end
 
 group :test do
