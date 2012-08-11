@@ -8,9 +8,12 @@ class User < ActiveRecord::Base
   has_many :applications, through: :accessions
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role
+  attr_accessible :email, :password, :password_confirmation,
+    :remember_me, :role, :accessions_attributes
 
   default_value_for :role, :user
+
+  accepts_nested_attributes_for :accessions
 
   def admin?
     role.to_sym == :admin
