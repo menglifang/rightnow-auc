@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       instance_eval &block
     end
   end
+
+  def after_sign_out_path_for(resource)
+    params[:redirect_to] || super(resource)
+  end
 end
