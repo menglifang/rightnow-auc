@@ -7,13 +7,13 @@ module Api
       respond_to :json
 
       def index
-        users = User.of_app(application)
+        users = User.of_app(application).order('id DESC')
 
         render json: { users: users }, status: :ok
       end
 
       def create
-        user = User.new(params[:user])
+        user = User.new(assign_application(params[:user]))
         if user.save
           render json: user, status: :created
         else
@@ -38,6 +38,14 @@ module Api
         unless current_resource_owner.admin_of?(application)
           head :unauthorized
         end
+      end
+
+      def assign_application(user)
+        user[:accessions_attributes].each do |attrs|
+          attrs[:application] = application
+        end
+
+        user
       end
     end
   end
